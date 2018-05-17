@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Inventory</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+   
+  </head>
+  <body>
+        <h2> UnCompeleted</h2>
+      <form>
+        <input type="text" name="item-name" id="item-name"  placeholder="Item Name" required>
+        <input type="text" name="item-quantity" id="item-quantity" placeholder="Quantity">
+        <input type="number" name="item-price" id="item-price" placeholder="Price">
+        <span id='add-button' title="Add Something" class="ion-plus-circled" onclick="onAddButton()" href="#"></span>
+      </form>
+
+    <table id="inventory">
+      <thead>
+        <tr>
+          <th>checkbox</th>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Time</th>
+          <th id="action">Action</th>
+        </tr>
+      </thead>
+      <tbody id="tablerows">
+      </tbody>
+    </table>
+
+    <div class="grid-container">
+      
+        <div class="item1">Compeleted</div>
+  
+      </div>
+  
+      <script src="./js/script.js"></script>
+
+  </body>
+</html>
