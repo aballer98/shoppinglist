@@ -1,43 +1,53 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Inventory</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <link rel="stylesheet" href="./css/style.css">
-      <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-   
-  </head>
-  <body>
-        <h2> UnCompeleted</h2>
+
+<head>
+<link rel="stylesheet" href="/css/style.css">
+<title>Home</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header>
+    App  Shopping list
+    </header>
+
+    <main>
+
       <form>
-        <input type="text" name="item-name" id="item-name"  placeholder="Item Name" required>
-        <input type="text" name="item-quantity" id="item-quantity" placeholder="Quantity">
-        <input type="number" name="item-price" id="item-price" placeholder="Price">
-        <span id='add-button' title="Add Something" class="ion-plus-circled" onclick="onAddButton()" href="#"></span>
+        <label for="item-input">Item</label>
+        <input type="text" id="item-input">
+        <label for="quantity-input">Quantity</label>
+        <input type="number" id="quantity-input">
+        <button type="submit" id="submit-btn">Add</button>
       </form>
 
-    <table id="inventory">
-      <thead>
-        <tr>
-          <th>checkbox</th>
-          <th>Item</th>
-          <th>Quantity</th>
-          <th>Price</th>
-          <th>Time</th>
-          <th id="action">Action</th>
-        </tr>
-      </thead>
-      <tbody id="tablerows">
-      </tbody>
-    </table>
+      <div id="lists">
+        <p class="list__label">Still need to grab <span class="quantity" id="shopping-num">0</span></p>
+        <ul id="shopping-list">
+        </ul>
 
-    <div class="grid-container">
-      
-        <div class="item1">Compeleted</div>
-  
+        <p class="list__label">In cart <span class="quantity" id="bought-num">1</span></p>
+       
+        <ul id="bought-list">
+    
+        </ul>
       </div>
-  
-      <script src="./js/script.js"></script>
 
-  </body>
+    </main>
+    <div class="push"></div>
+  </div>
+
+  <footer>
+    <a href="" target="_blank"></a>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+<script src="./js/script.js">
+
+</script>
+
+</body>
+
 </html>
